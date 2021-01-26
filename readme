@@ -1,0 +1,7 @@
+pip install pyyaml
+pip install qtpy
+pip install pillow
+pip install termcolor
+pip install colorama
+pip install numpy
+pip install imgviz
