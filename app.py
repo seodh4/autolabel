@@ -371,6 +371,15 @@ class MainWindow(QtWidgets.QMainWindow):
             enabled=False,
         )
 
+        magicbong = action(
+            self.tr("Create magicbong"),
+            lambda: self.toggleDrawMode(False, createMode="polygon"),
+            shortcuts["create_linestrip"],
+            "objects",
+            self.tr("Start drawing magicbong"),
+            enabled=True,
+        )
+
         delete = action(
             self.tr("Delete Polygons"),
             self.deleteSelectedShape,
@@ -573,6 +582,7 @@ class MainWindow(QtWidgets.QMainWindow):
             removePoint=removePoint,
             createMode=createMode,
             editMode=editMode,
+            magicbong=magicbong,
             createRectangleMode=createRectangleMode,
             createCircleMode=createCircleMode,
             createLineMode=createLineMode,
@@ -718,6 +728,7 @@ class MainWindow(QtWidgets.QMainWindow):
             delete,
             undo,
             brightnessContrast,
+            magicbong,
             None,
             zoom,
             fitWidth,
